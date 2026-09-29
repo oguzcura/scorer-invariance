@@ -1,0 +1,243 @@
+blind_id,benchmark,model,item_idx,gold,pred,why_flagged
+Q001,tr_mmlu,mimo-v2.5,99,99,A) 99,near-threshold
+Q002,tumlu_tr,mimo-v2.5,106,18,D) 18,near-threshold
+Q003,tumlu_tr,deepseek-v4-flash,53,kg.m,"d verbatim text. If both B and D identical, which is correct? We need infer from original exam maybe one option is ""kg.m²"" but user typed ""kg.m"" for both? Let's examine: ""B) kg.m C) J.s D) kg.m"" There",defect
+Q004,tumlu_tr,gpt-5.6-luna,97,91,A) 91,near-threshold
+Q005,tumlu_tr,mimo-v2.5,199,-6,C) -6,near-threshold
+Q006,halluverse_tr,mimo-v2.5,160,"Pico Da Neblin, Güney Amerika Ülkesi Brezilya'nın en yüksek dağ.","Pico da Neblina, Brezilya'nın en yüksek dağıdır.",near-threshold
+Q007,ragturk_formal5k,gpt-5.6-luna,143,"1873 yılında bira ustası Heinrich Beck, iş insanı Thomas May ve Luder Rutenberg tarafından.","1873 yılında Lüder Rutenberg, Heinrich Beck ve Thomas May tarafından kurulmuştur.",near-threshold
+Q008,ragturk_formal5k,gpt-5.6-luna,81,Dougl Clayborne,Mary Rose Clayborne,near-threshold
+Q009,halluverse_tr,deepseek-v4-flash,69,David Ben-Gurion İsrail tarafından yönetilen yeni ülke.,"rebir) yazın."" In such tasks, the answer is a phrase from the source. We need infer from question. The question itself: ""David Ben-Gurion tarafından hangi yeni ülkeye yönelikti?"" The answer might be """,near-threshold
+Q010,halluverse_tr,mimo-v2.5,183,Cevap Brecon Beacons.,Brecon Beacons Milli Parkı,near-threshold
+Q011,tr_mmlu,deepseek-v4-flash,146,Kün,B) Kün,defect
+Q012,tr_mmlu,gpt-5.6-luna,191,Kurulum maliyetleri,D) Değer kaybı maliyetleri,near-threshold
+Q013,tumlu_tr,gpt-5.6-luna,14,Volt,D) Volt,defect
+Q014,ragturk_formal5k,gpt-5.6-luna,120,"Wever-Croes, 5 Aralık 1966'da Leiden'de doğmuştur.","5 Aralık 1966'da Oranjestad, Aruba'da doğmuştur.",near-threshold
+Q015,tr_mmlu,gpt-5.6-luna,47, Beka,D)  Beka,defect
+Q016,ragturk_formal5k,deepseek-v4-flash,111,1652'de,1652,near-threshold
+Q017,tumlu_tr,gpt-5.6-luna,74,1.10,A) 1.10,near-threshold
+Q018,ragturk_formal5k,deepseek-v4-flash,1,M.S. 2. yüzyılda.,"Soru Türkçe ve ""kaynak metindeki haliyle"" ifadesi var. Bu, belki bir paragraftan alınmıştır. Cevap ""2. yüzyıl"" olabilir. Ancak ""hangi yüzyılda"" diye soruyor, cevap ""2. yüzyılda"" şeklinde olabilir. Ama",near-threshold
+Q019,halluverse_tr,mimo-v2.5,114,"McCaig'in Oban, İskoçya'daki Folly, daha ünlü bina kolosseum tarzında inşa edildi.","ban, İskoçya'daki çılgınlığı, daha ünlü bina tarzında inşa edildi?"" The word ""çılğınlığı"" might be a typo or mistranslation; it probably means ""folly"" as in a whimsical structure.
+
+In Turkish, ""McCaig",near-threshold
+Q020,tumlu_tr,gpt-5.6-luna,25,Bor,A) Bor,defect
+Q021,ragturk_formal5k,gpt-5.6-luna,136,1973 yılında,1973,near-threshold
+Q022,tr_mmlu,deepseek-v4-flash,123,IS,E) IS,defect
+Q023,halluverse_tr,deepseek-v4-flash,95,Cevap Avustralya.,"ountry name. ""Avustralya"" is enough. But ""kaynak metindeki haliyle AYNEN"" means if source says ""Avustralya'nın ilk başbakanı"" then write that. Let's examine.
+
+Maybe this is from a ""Tarihte Bugün"" or """,near-threshold
+Q024,tr_mmlu,gpt-5.6-luna,10,"0,08","A) 0,08",near-threshold
+Q025,tr_mmlu,mimo-v2.5,47, Beka,"aniyya), Eternity (Qidam), Perpetuity (Beka), Independence from space and time, etc. So Beka is indeed one of them.
+
+Option C is clearly not an attribute, so it's likely a trick. The question asks for",defect
+Q026,tumlu_tr,gpt-5.6-luna,186,225,A) 225,near-threshold
+Q027,tumlu_tr,mimo-v2.5,93,IV,"III talks about the right to life being guaranteed, which implies protection of life, but doesn't explicitly prohibit killing or suicide.
+
+- Sentence IV says people cannot endanger their own or others",defect
+Q028,ragturk_formal5k,deepseek-v4-flash,97,Hesap makinelerine.,"rışması"" organized by ""TEGV""? Hmm.
+
+Maybe from ""Bilgi Yarışması"" in ""Dershane"" with ""Geri Sayım Turu"" where ""hesap makinesi kullanılmasına izin verilmez."" Because countdown round in math? ""Geri Sayım""",near-threshold
+Q029,tr_mmlu,mimo-v2.5,100,7,A) 7,near-threshold
+Q030,tr_mmlu,deepseek-v4-flash,34,80,D) 80,near-threshold
+Q031,ragturk_formal5k,gpt-5.6-luna,153,1532,1532 yılında,near-threshold
+Q032,tumlu_tr,mimo-v2.5,24,Organik	Nadas	Seracılık,"d.
+
+So for I: Organic – II: Nadas – III: Seracılık
+
+That corresponds to option D.
+
+Now, the answer should be given as ONLY the letter and then the verbatim choice text. So I need to output: D) Organik",near-threshold
+Q033,tumlu_tr,mimo-v2.5,198,D vitamini,"e vitamins should match property II.
+
+Let me list the properties and possible matches:
+
+- I: Night blindness → Vitamin A
+
+- II: Abundant in citrus fruits and green vegetables → Could be Vitamin C, but",near-threshold
+Q034,tumlu_tr,deepseek-v4-flash,97,91,A) 91,near-threshold
+Q035,halluverse_tr,deepseek-v4-flash,55,Cevap Montgomery Alabama.,"Montgomery, Alabama",near-threshold
+Q036,tumlu_tr,mimo-v2.5,83,$\(90 \)$,A) $\(90 \)$,near-threshold
+Q037,tr_mmlu,gpt-5.6-luna,50,Prim,D) Prim,defect
+Q038,tumlu_tr,deepseek-v4-flash,175,PET,"t refer to ""tedavi planlamasında üç boyutlu görüntüleme"" in radiation oncology, where CT is used for 3D treatment planning. The question wording: ""Özellikle onkoloji hastalarının üç boyutlu görüntüsün",defect
+Q039,tumlu_tr,gpt-5.6-luna,181,750,B) 750,near-threshold
+Q040,tr_mmlu,deepseek-v4-flash,50,Prim,D) Prim,defect
+Q041,tumlu_tr,gpt-5.6-luna,100,5,D) 5,near-threshold
+Q042,tr_mmlu,mimo-v2.5,34,80,D) 80,near-threshold
+Q043,halluverse_tr,deepseek-v4-flash,21,Şehir Delhi'nin yerini 1912'de Hindistan'ın başkenti Kalküta'dır.," ""hangi şehir başkent oldu"" diye soruyor olabilir. Ama ""Delhi 1912'de Hindistan'ın başkenti olarak hangi şehre girdi?"" cümlesi gramer olarak ""Delhi, hangi şehre başkent olarak girdi?"" gibi. Yani Delhi",near-threshold
+Q044,tumlu_tr,mimo-v2.5,184,44,B) 44,near-threshold
+Q045,tumlu_tr,deepseek-v4-flash,30,8,B) 8,near-threshold
+Q046,tumlu_tr,gpt-5.6-luna,193,uud,B) uud,defect
+Q047,tumlu_tr,deepseek-v4-flash,100,5,D) 5,near-threshold
+Q048,tumlu_tr,mimo-v2.5,14,Volt,D) Volt,defect
+Q049,tumlu_tr,gpt-5.6-luna,102,7,B) 7,near-threshold
+Q050,tumlu_tr,gpt-5.6-luna,199,-6,C) -6,near-threshold
+Q051,tumlu_tr,deepseek-v4-flash,60,10,B) 10,near-threshold
+Q052,tumlu_tr,deepseek-v4-flash,199,-6,C) -6,near-threshold
+Q053,halluverse_tr,gpt-5.6-luna,160,"Pico Da Neblin, Güney Amerika Ülkesi Brezilya'nın en yüksek dağ.","Pico da Neblina, Brezilya'nın en yüksek dağıdır.",near-threshold
+Q054,tumlu_tr,gpt-5.6-luna,197,    AA                aa,D)     AA                aa,near-threshold
+Q055,tr_mmlu,mimo-v2.5,50,Prim,D) Prim,defect
+Q056,halluverse_tr,mimo-v2.5,96,Cevap Malcolm Arnold.,Sir Malcolm Arnold,near-threshold
+Q057,ragturk_formal5k,gpt-5.6-luna,11,"UBV fotometrik sistemi, 1950'lerde Amerikalı Harold Lester Johnson ve William Wilson Morgan tarafından tanıtıldı.",Johnson ve Morgan tarafından 1953 yılında tanıtılmıştır.,defect
+Q058,tumlu_tr,gpt-5.6-luna,184,44,B) 44,near-threshold
+Q059,ragturk_formal5k,gpt-5.6-luna,28,Dormen Tiyatrosu,Ankara Sanat Tiyatrosu,near-threshold
+Q060,tr_mmlu,mimo-v2.5,161,Cisim çıkarılmadan tespiti yapılır ve yaralı hastaneye sevk edilir.," as is.
+
+Also, note that in the options, there's a typo in option D: ""Dört şıklı soru"" is likely meant to be a distractor.
+
+So, for the answer, I'll state: A) Cisim çıkarılmadan tespiti yapılır ve yar",near-threshold
+Q061,tumlu_tr,deepseek-v4-flash,193,uud,B) uud,defect
+Q062,tumlu_tr,mimo-v2.5,64,Hız,"e-check: In physics, ""basınç"" (pressure) is indeed a scalar. ""Kütle"" (mass) is scalar. ""Zaman"" (time) is scalar. So, only ""Hız"" could be a vector.
+
+In Turkish, ""hız"" is often used interchangeably with",defect
+Q063,tr_mmlu,mimo-v2.5,10,"0,08","A) 0,08",near-threshold
+Q064,tumlu_tr,deepseek-v4-flash,197,    AA                aa,D)     AA                aa,near-threshold
+Q065,tr_mmlu,deepseek-v4-flash,10,"0,08","A) 0,08",near-threshold
+Q066,tumlu_tr,deepseek-v4-flash,178,8,A) 8,near-threshold
+Q067,tumlu_tr,mimo-v2.5,87,"İnsan bilgiye zaten sahiptir, yalnızca bunun farkına varması gerekir.",", reproduced verbatim as it appears above:"" So, I should start with the letter, then the text.
+
+In the example, it's ""e.g. A)"" so probably something like ""B) İnsan bilgiye zaten sahiptir, yalnızca bun",near-threshold
+Q068,tumlu_tr,gpt-5.6-luna,93,IV,C) IV,defect
+Q069,halluverse_tr,deepseek-v4-flash,160,"Pico Da Neblin, Güney Amerika Ülkesi Brezilya'nın en yüksek dağ.","merika ülkesinin en yüksek dağ mı?"" Literally: ""Is Pico da Neblin the highest mountain of the South American country?"" There is no ""bir"" (a). ""Güney Amerika ülkesinin"" = ""of the South American country",near-threshold
+Q070,tr_mmlu,gpt-5.6-luna,91,2002,C) 2002,near-threshold
+Q071,tumlu_tr,deepseek-v4-flash,102,7,B) 7,near-threshold
+Q072,ragturk_formal5k,mimo-v2.5,28,Dormen Tiyatrosu,Ankara Halkevi Tiyatrosu,near-threshold
+Q073,tr_mmlu,deepseek-v4-flash,192,15,B) 15,near-threshold
+Q074,ragturk_formal5k,deepseek-v4-flash,195,5 Mayıs 2025 tarihinde.,5 Mayıs 2025'te,near-threshold
+Q075,halluverse_tr,deepseek-v4-flash,96,Cevap Malcolm Arnold.,Sir Malcolm Arnold,near-threshold
+Q076,halluverse_tr,deepseek-v4-flash,40,"Jazz müzisyeni, heykeltıraş Robert Graham tarafından oluşturulan ve 1997'de Central Park New York'ta, 5. Cadde ve 100. Cadde'nin kesişimine yakın bir anıtı var."," be ""Duke Ellington"" or ""Duke Ellington Memorial"". Let's parse.
+
+Question: ""Hangi caz müzisyeni heykeltıraş Robert Graham tarafından yaratılan ve 1997'de Central Park New York'ta, 5. Cadde ve 100. Cad",near-threshold
+Q077,tumlu_tr,deepseek-v4-flash,64,Hız,C) Hız,defect
+Q078,ragturk_formal5k,gpt-5.6-luna,155,"Roger Pierre ve Jean-Marc Thibault komedilerde sıklıkla birlikte görülmüşler ve Fransa'nın gelmiş geçmiş en popüler komedi oyuncularından biri olarak tanınmalarını sağlamışlardır. Bu çalışmalar 1950'ler, 1960'lar ve 1970'ler boyunca düzenli olarak birçok eserde yer almıştır.","Bu çalışmalar, Roger Pierre’in kariyerinin en önemli ve en tanınmış bölümünü oluşturmuş; 1947’den 1976’ya kadar olan dönemi kapsamıştır.",defect
+Q079,halluverse_tr,deepseek-v4-flash,10,"Salvador Allende, General Augusto Pinochet ve Ölüm Karavanı, 1970'lerde ve 1980'lerde Şili'de hangi ülkenin tarihiyle bağlantılı.",Şili,defect
+Q080,tr_mmlu,deepseek-v4-flash,47, Beka,D) Beka,defect
+Q081,halluverse_tr,gpt-5.6-luna,183,Cevap Brecon Beacons.,Brecon Beacons National Park,near-threshold
+Q082,tr_mmlu,mimo-v2.5,123,IS,E) IS,defect
+Q083,halluverse_tr,mimo-v2.5,55,Cevap Montgomery Alabama.,"Montgomery, Alabama",near-threshold
+Q084,halluverse_tr,mimo-v2.5,133,"Mike Leigh, Jim Broadbent ve Timothy Spall'un oynadığı 1999 filmi Topsy Turvy filmini yönetti.","nadığı 1999 filminin ünlü bir müzik tiyatrosu ortaklığı hakkında yönetti?"" It might be incomplete. Perhaps it's meant to be: ""Who directed the 1999 film starring Mike Leigh, Jim Broadbent, and Timothy",near-threshold
+Q085,tr_mmlu,gpt-5.6-luna,146,Kün,B) Kün,defect
+Q086,tumlu_tr,mimo-v2.5,180,$\(\mathrm{\int \dfrac{6u^{2}-3u^{3}}{2+u}\ du} \)$,"3}}{2+u}\ du. We'll output that.
+
+But note: The problem statement includes backslashes for integral and fractions. We need to output exactly as in the options. So:
+
+A) ∫ \dfrac{6u^{2}-3u^{3}}{2+u}\ du",near-threshold
+Q087,tr_mmlu,deepseek-v4-flash,91,2002,C) 2002,near-threshold
+Q088,tumlu_tr,mimo-v2.5,186,225,A) 225,near-threshold
+Q089,halluverse_tr,deepseek-v4-flash,23,Tenis oyununda olduğu gibi bilinen 40 puan Deuce.," text. We need identify source. The question is in Turkish, likely from a dataset where answer is a phrase from a Wikipedia article. The wording ""Tenis oyunundaki gibi bilinen 40 puan nedir?"" Could be",near-threshold
+Q090,tumlu_tr,gpt-5.6-luna,45,94,D) 94,near-threshold
+Q091,tumlu_tr,gpt-5.6-luna,60,10,B) 10,near-threshold
+Q092,tr_mmlu,mimo-v2.5,101,Herhangi bir nedenden dolayı kanın % 5-10’unun kaybedilmesi beden üzerinde olumsuz etki yaratır.,"unun kaybedilmesi beden üzerinde olumsuz etki yaratır."" Is this incorrect? I think in general, losing 5-10% of blood is not necessarily catastrophic, and in some cases, it might not have a significant",near-threshold
+Q093,tumlu_tr,deepseek-v4-flash,186,225,A) 225,near-threshold
+Q094,tumlu_tr,mimo-v2.5,181,750,B) 750,near-threshold
+Q095,halluverse_tr,mimo-v2.5,10,"Salvador Allende, General Augusto Pinochet ve Ölüm Karavanı, 1970'lerde ve 1980'lerde Şili'de hangi ülkenin tarihiyle bağlantılı.",Şili,defect
+Q096,ragturk_formal5k,deepseek-v4-flash,96,"""Mercy, Mercy, Mercy"", ""Walk Tall"" ve ""Country Preacher"".","The answer likely a sentence from text: ""Mercy, Mercy, Mercy"" ve ""Country Preacher"" parçalarını besteledi. Need exact.
+
+Let's search memory from Turkish sites. Maybe from ""Cazın Büyük Ustası Joe Zawin",near-threshold
+Q097,halluverse_tr,gpt-5.6-luna,96,Cevap Malcolm Arnold.,Sir Malcolm Arnold,near-threshold
+Q098,tr_mmlu,gpt-5.6-luna,192,15,B) 15,near-threshold
+Q099,tumlu_tr,deepseek-v4-flash,106,18,D) 18,near-threshold
+Q100,halluverse_tr,gpt-5.6-luna,55,Cevap Montgomery Alabama.,"Montgomery, Alabama",near-threshold
+Q101,halluverse_tr,gpt-5.6-luna,10,"Salvador Allende, General Augusto Pinochet ve Ölüm Karavanı, 1970'lerde ve 1980'lerde Şili'de hangi ülkenin tarihiyle bağlantılı.",Şili,defect
+Q102,tumlu_tr,deepseek-v4-flash,93,IV,C) IV,defect
+Q103,tr_mmlu,deepseek-v4-flash,11,Belirlenim kategorisi,"ion. In Turkish ""belirlenim"" = determination. So answer D.
+
+Let's verify: Fichte's three principles correspond to categories: reality, negation, and limitation/determination. The last is ""Belirlenim k",near-threshold
+Q104,tumlu_tr,mimo-v2.5,185,60,B) 60,near-threshold
+Q105,halluverse_tr,mimo-v2.5,80,Cevap Güney Afrika.,Güney Afrika Cumhuriyeti,near-threshold
+Q106,ragturk_formal5k,mimo-v2.5,111,1652'de,1652,near-threshold
+Q107,tumlu_tr,deepseek-v4-flash,14,Volt,D) Volt,defect
+Q108,halluverse_tr,deepseek-v4-flash,12,Lewis Carroll'dan Alice'in ilk baskıları ... kitaplar 19. yüzyıl grafik humourist ve siyasi karikatürist John Tenniel'in çizimleriyle özel bir lezzet verdi.,"ezzet verildi mi?"" This is a fill-in? Actually the question is: ""Lewis Carroll'un ilk baskılarına"" ""Alice ..."" ""Kitaplara 19. yüzyıl grafik humourist ve siyasi karikatüristin resimleri tarafından özel",near-threshold
+Q109,tumlu_tr,mimo-v2.5,78,İltizam sistemi,"e system itself wasn't primarily about tax collection by private farmers.
+
+- **Mukataa sistemi**: This is a type of tax farming for land. It's closely related to iltizam. In fact, mukataa often refers",near-threshold
+Q110,tumlu_tr,gpt-5.6-luna,53,kg.m,B) kg.m,defect
+Q111,tumlu_tr,mimo-v2.5,138,6,A) 6,near-threshold
+Q112,tumlu_tr,mimo-v2.5,175,PET,"e check the options again.
+
+Perhaps the intended answer is BT, as CT scans are fundamental for 3D imaging in oncology.
+
+But let's consider MR: MRI can also do 3D imaging, and it's used in oncology for",defect
+Q113,tumlu_tr,deepseek-v4-flash,181,750,B) 750,near-threshold
+Q114,tr_mmlu,deepseek-v4-flash,125,35,A) 35,near-threshold
+Q115,ragturk_formal5k,deepseek-v4-flash,123,Küçük bir çocukken acımasız kurt adam Fenrir Greyback tarafından ısırıldı.,"re is an article ""Remus Lupin"" with sentence: ""Lupin, likantropiye Fenrir Greyback tarafından ısırıldıktan sonra yakalandı."" Need exact.
+
+Let's search memory of Turkish Harry Potter Wiki? ""Remus Lupin",near-threshold
+Q116,tr_mmlu,gpt-5.6-luna,157,HIF,A) MPM,defect
+Q117,tumlu_tr,gpt-5.6-luna,64,Hız,C) Hız,defect
+Q118,tr_mmlu,mimo-v2.5,43,Çoklu bölümlendirme,"laştırılmış pazarlama (differentiated) – which might be ""farklılaştırılmış bölümlendirme""
+
+But here, the options are ""bölümlendirme"" not ""pazarlama"". The question says ""hedef pazar yaklaşımları"" which",near-threshold
+Q119,tumlu_tr,mimo-v2.5,25,Bor,A) Bor,defect
+Q120,tumlu_tr,gpt-5.6-luna,175,PET,B) PET,defect
+Q121,tumlu_tr,deepseek-v4-flash,45,94,D) 94,near-threshold
+Q122,tr_mmlu,gpt-5.6-luna,99,99,A) 99,near-threshold
+Q123,tumlu_tr,deepseek-v4-flash,138,6,A) 6,near-threshold
+Q124,tr_mmlu,deepseek-v4-flash,70,Birleşik cümleler kullanır.,"t's search memory from Turkish child development (gelişim) tables. 48-60 ay (4-5 yaş) dil gelişimi özellikleri:
+- 4 yaş: ""Konuşmalarında yetişkin dilinin kurallarını kullanır"", ""5-6 kelimelik cümleler",near-threshold
+Q125,tumlu_tr,mimo-v2.5,100,5,D) 5,near-threshold
+Q126,tumlu_tr,gpt-5.6-luna,30,8,B) 8,near-threshold
+Q127,halluverse_tr,deepseek-v4-flash,133,"Mike Leigh, Jim Broadbent ve Timothy Spall'un oynadığı 1999 filmi Topsy Turvy filmini yönetti.","urkish: ""Topsy-Turvy, Mike Leigh'in yönettiği, Jim Broadbent ve Timothy Spall'un oynadığı 1999 yapımı bir İngiliz müzikal komedi-drama filmidir. Film, Gilbert ve Sullivan'ın ünlü ortaklığını konu alır",near-threshold
+Q128,tumlu_tr,deepseek-v4-flash,25,Bor,A) Bor,defect
+Q129,tr_mmlu,mimo-v2.5,157,HIF,"
+I think I've heard of ""TAP"" in the context of transportation management systems.
+
+Let me consider the other options: ""HIF"" might stand for ""Hız İhlal Fotosı"", which is about speeding, not mileage.
+
+""",defect
+Q130,tumlu_tr,deepseek-v4-flash,83,$\(90 \)$,A) $\(90 \)$,near-threshold
+Q131,ragturk_formal5k,mimo-v2.5,155,"Roger Pierre ve Jean-Marc Thibault komedilerde sıklıkla birlikte görülmüşler ve Fransa'nın gelmiş geçmiş en popüler komedi oyuncularından biri olarak tanınmalarını sağlamışlardır. Bu çalışmalar 1950'ler, 1960'lar ve 1970'ler boyunca düzenli olarak birçok eserde yer almıştır.","950-1970 dönemlerini kapsamaktadır.""
+
+I need to be precise. Let me think about common references.
+
+Roger Pierre and Jean-Marc Thibault were a famous French comedy duo. They collaborated from the early",defect
+Q132,ragturk_formal5k,deepseek-v4-flash,44,"Vic, 1991'den 2000 yılına kadar hiçbir albüm ve derleme kapağında görünmedi.","band? Hmm.
+
+Maybe ""Vic"" is ""Vic"" (a cat?) on album covers? Let's think of ""Vic"" as ""Vic"" in ""The Cats"" ?
+
+Let's parse Turkish: ""Vic, 1991'den 2000 yılına kadar hangi albüm kapaklarında görünmedi?"" The",near-threshold
+Q133,tumlu_tr,mimo-v2.5,193,uud,B) uud,defect
+Q134,ragturk_formal5k,mimo-v2.5,2,"Savaş Araştırmaları Enstitüsü, Ukrayna'nın Herson Oblastı'ndaki karşı saldırılarının, İnhulets nehri boyunca Rus kara iletişim hatlarını başarıyla bozduğunu değerlendirdi.","Savaş Araştırmaları Enstitüsü, 1 Haziran itibarıyla Herson Oblastı'ndaki karşı saldırıların, Rusya'nın batı kıyısında sınırlı ilerleme kaydettiğini ancak stratejik bir hedefe ulaşamadığını değerlendirdi.",near-threshold
+Q135,tr_mmlu,deepseek-v4-flash,157,HIF,"termediate Fare""? Actually ""HIF"" = Higher Intermediate Fare rule. ""ORI"" = ""Origin""?? ""TAP"" = ""Temporary Actual Place""? Hmm.
+
+Question in Turkish: ""Bir parkurda izin verilen mil tutarının geçilip geçil",defect
+Q136,halluverse_tr,deepseek-v4-flash,183,Cevap Brecon Beacons.,"he answer should be ""Brecon Beacons National Park"" if source is English. But question in Turkish says ""Milli Park"" not ""National Park"". The answer in Turkish would be ""Brecon Beacons Milli Parkı"". Let",near-threshold
+Q137,tumlu_tr,mimo-v2.5,197,    AA                aa,D) AA                aa,near-threshold
+Q138,ragturk_formal5k,mimo-v2.5,136,1973 yılında,1973,near-threshold
+Q139,tr_mmlu,deepseek-v4-flash,191,Kurulum maliyetleri,D) Değer kaybı maliyetleri,near-threshold
+Q140,tr_mmlu,gpt-5.6-luna,34,80,D) 80,near-threshold
+Q141,tumlu_tr,mimo-v2.5,60,10,B) 10,near-threshold
+Q142,halluverse_tr,gpt-5.6-luna,29,Cevap Berlin Duvarı.,Berlin Duvarı Anıtı,near-threshold
+Q143,tumlu_tr,gpt-5.6-luna,138,6,A) 6,near-threshold
+Q144,tumlu_tr,deepseek-v4-flash,184,44,B) 44,near-threshold
+Q145,ragturk_formal5k,deepseek-v4-flash,11,"UBV fotometrik sistemi, 1950'lerde Amerikalı Harold Lester Johnson ve William Wilson Morgan tarafından tanıtıldı.","UBV fotometrik sistemi, 1953 yılında Harold Johnson ve William Morgan tarafından tanıtılmıştır.",defect
+Q146,tumlu_tr,gpt-5.6-luna,83,$\(90 \)$,A) $\(90 \)$,near-threshold
+Q147,ragturk_formal5k,gpt-5.6-luna,57,Protez bir el.,Yeni bir el.,near-threshold
+Q148,ragturk_formal5k,deepseek-v4-flash,198,"TV göstergesi, karakterin televizyon dizilerinde göründüğü anlamına gelir.","zyon dizilerinde göründüğü"" ise ""TV"" simgesiyle mi? 
+
+Soru Türkçe ve ""gösterge"" kelimesi kullanılmış. ""Gösterge"" işaret/sembol demek. Belki de ""televizyon dizilerinde göründüğü"" bir ""TV"" kısaltmasıyla",near-threshold
+Q149,halluverse_tr,deepseek-v4-flash,19,"Tenis oyuncusu 1990-1995 yılları arasında Wimbledon'daki erkek single'larının finaline üç kez ulaştı, her vesileyle kaybeden Boris Becker.","won 1993-95. Need exact.
+
+Let's parse: ""1990-1995 yılları arasında üç kez Wimbledon'daki erkek single'larının finaline ulaştı."" This is a sentence fragment. Could be from a biography of ""Boris Becker""",near-threshold
+Q150,tumlu_tr,gpt-5.6-luna,178,8,A) 8,near-threshold
+Q151,tumlu_tr,gpt-5.6-luna,106,18,D) 18,near-threshold
+Q152,tr_mmlu,mimo-v2.5,153,Bir devletin güvenliğine öncelik verilmemiştir.,D) Bir devletin güvenliğine öncel,near-threshold
+Q153,tr_mmlu,gpt-5.6-luna,123,IS,E) IS,defect
+Q154,tr_mmlu,gpt-5.6-luna,125,35,A) 35,near-threshold
+Q155,tumlu_tr,deepseek-v4-flash,185,60,B) 60,near-threshold
+Q156,ragturk_formal5k,mimo-v2.5,11,"UBV fotometrik sistemi, 1950'lerde Amerikalı Harold Lester Johnson ve William Wilson Morgan tarafından tanıtıldı.",Johnson ve Morgan tarafından 1953'te tanıtılmıştır.,defect
+Q157,tr_mmlu,mimo-v2.5,146,Kün,A) Uluş,defect
+Q158,halluverse_tr,deepseek-v4-flash,162,Cevap buz pateni.,Artistik buz pateni,near-threshold
+Q159,tr_mmlu,mimo-v2.5,191,Kurulum maliyetleri,"sis for transportation or inventory, there are different cost components.
+
+Another thought: ""Değer kaybı maliyetleri"" could mean depreciation costs, which is exactly what you get when you allocate the",near-threshold
+Q160,tr_mmlu,deepseek-v4-flash,99,99,A) 99,near-threshold
+Q161,tumlu_tr,gpt-5.6-luna,167,$\(5 \)$,C) $\(5 \)$,near-threshold
+Q162,tumlu_tr,gpt-5.6-luna,185,60,B) 60,near-threshold
+Q163,tumlu_tr,mimo-v2.5,53,kg.m," me read the question again: ""SI birim sisteminde eylemsizlik momentinin (I) birimi aşağıdakilerden hangisidir?"" and options.
+
+I recall that in Turkish, ""eylemsizlik momenti"" is moment of inertia. Its",defect
+Q164,tr_mmlu,gpt-5.6-luna,100,7,A) 7,near-threshold
+Q165,tr_mmlu,deepseek-v4-flash,5,Yüksek Seçim Kurulu,"elections, ""Belediye başkanlığı, belediye meclis üyeliği, il genel meclisi üyeliği, muhtarlık ve ihtiyar heyeti seçimlerinde adaylık itirazları"" are handled by ""ilçe seçim kurulu"" and ""il seçim kurulu",near-threshold
+Q166,ragturk_formal5k,deepseek-v4-flash,155,"Roger Pierre ve Jean-Marc Thibault komedilerde sıklıkla birlikte görülmüşler ve Fransa'nın gelmiş geçmiş en popüler komedi oyuncularından biri olarak tanınmalarını sağlamışlardır. Bu çalışmalar 1950'ler, 1960'lar ve 1970'ler boyunca düzenli olarak birçok eserde yer almıştır.","l est connu pour ses duos comiques avec Jean-Marc Thibault, qui ont marqué les années 1950 à 1970."" Ama Türkçe kaynak metin aranıyor.
+
+Soru Türkçe olduğuna göre, kaynak metin de Türkçe olabilir. Belki",defect

@@ -1,0 +1,77 @@
+{
+ "cells": {
+  "halluverse_tr|deepseek-v4-flash": {
+   "frozen_pct": 9.5,
+   "repaired_pct": 9.5,
+   "delta_pp": 0.0,
+   "n": 200
+  },
+  "halluverse_tr|gpt-5.6-luna": {
+   "frozen_pct": 9.5,
+   "repaired_pct": 9.5,
+   "delta_pp": 0.0,
+   "n": 199
+  },
+  "halluverse_tr|mimo-v2.5": {
+   "frozen_pct": 7.5,
+   "repaired_pct": 7.5,
+   "delta_pp": 0.0,
+   "n": 200
+  },
+  "ragturk_formal5k|deepseek-v4-flash": {
+   "frozen_pct": 5.0,
+   "repaired_pct": 6.0,
+   "delta_pp": 1.0,
+   "n": 200
+  },
+  "ragturk_formal5k|gpt-5.6-luna": {
+   "frozen_pct": 7.8,
+   "repaired_pct": 8.3,
+   "delta_pp": 0.5,
+   "n": 193
+  },
+  "ragturk_formal5k|mimo-v2.5": {
+   "frozen_pct": 5.0,
+   "repaired_pct": 5.0,
+   "delta_pp": 0.0,
+   "n": 200
+  },
+  "tr_mmlu|deepseek-v4-flash": {
+   "frozen_pct": 70.5,
+   "repaired_pct": 74.0,
+   "delta_pp": 3.5,
+   "n": 200
+  },
+  "tr_mmlu|gpt-5.6-luna": {
+   "frozen_pct": 80.0,
+   "repaired_pct": 84.0,
+   "delta_pp": 4.0,
+   "n": 200
+  },
+  "tr_mmlu|mimo-v2.5": {
+   "frozen_pct": 49.5,
+   "repaired_pct": 52.5,
+   "delta_pp": 3.0,
+   "n": 200
+  },
+  "tumlu_tr|deepseek-v4-flash": {
+   "frozen_pct": 72.5,
+   "repaired_pct": 81.5,
+   "delta_pp": 9.0,
+   "n": 200
+  },
+  "tumlu_tr|gpt-5.6-luna": {
+   "frozen_pct": 82.0,
+   "repaired_pct": 90.5,
+   "delta_pp": 8.5,
+   "n": 200
+  },
+  "tumlu_tr|mimo-v2.5": {
+   "frozen_pct": 35.0,
+   "repaired_pct": 41.0,
+   "delta_pp": 6.0,
+   "n": 200
+  }
+ },
+ "leaderboard_flips": []
+}
