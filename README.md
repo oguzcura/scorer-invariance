@@ -14,16 +14,32 @@ rater agreement 95.8%, Cohen's κ = 0.902). Re-scoring 12 benchmark×model cells
 scores by up to **+9.0pp (+12.4% relative)**, 4/12 cells Holm-significant; **no
 leaderboard rank flips** — the contribution is measurement validity, not reordering.
 
+**Why this repo exists.** During calibration of the sibling contamination audit, the hand-labeled
+validation set exposed defects in the frozen answer-matching cascade that were *provable*, not
+statistical: a regex branch that can never match apostrophe decade-tokens, and a similarity
+ceiling no short gold answer can clear. A scorer that silently grades correct answers as wrong
+is an invalid instrument — every model comparison, pass-rate, and leaderboard position built on
+it inherits the error. This repo quantifies that cost end to end on the audit's own 2,392-pair
+pool, at $0 marginal compute (no API calls), under a frozen pre-registration.
+
+It is the third repository in a series of Turkish LLM evaluation-integrity studies:
+
+| Repo | Study |
+|------|-------|
+| [oguzcura/trmlu-audit](https://github.com/oguzcura/trmlu-audit) | Single-benchmark contamination audit (TR-MMLU) |
+| [oguzcura/tr-contamination-audit](https://github.com/oguzcura/tr-contamination-audit) | Multi-benchmark contamination audit (this repo's data source) |
+| **oguzcura/scorer-invariance** (this repo) | Scorer instrument-validity audit + pre-registered repair protocol |
+
 ## Repository structure
 
 | Path | Contents |
 |---|---|
-| `pre-registration.md` | Frozen pre-registration (sha256 self-hash in header; Amendment A1 appended) |
+| `pre-registration.md` | Frozen pre-registration (byte-exact frozen body; verify with `sha256sum` below; Amendment A1 appended) |
 | `paper/` | Draft v0 (Markdown; LaTeX conversion pending) |
 | `notes/` | Verification note (novelty), house conventions, prereg draft copy, overnight ops log |
 | `harness/` | Frozen scorer + calibration, pool scorer, two-token repair script |
-| `results/` | All scored/label artifacts the paper numbers trace to (see Reproduction) |
-| `data/` | (pending) dataset snapshots + manifest; datasets currently referenced in place |
+| `harness/results/` | All scored/label artifacts the paper numbers trace to (see Reproduction) |
+| `harness/data/` | Benchmark snapshots (CSV + `manifest.json`): tr_mmlu, tumlu_tr, ragturk_formal5k, halluverse_tr |
 
 ## Key results
 
@@ -56,11 +72,13 @@ the 166-pair package blind (no scorer output, randomized order, seed 42).
 
 ## Reproduction
 
+Requires Python ≥ 3.10. No API keys, no GPU — every script runs offline on the committed artifacts:
+
 ```bash
-uv run python harness/overnight_scorer_pool.py     # defect scan over the 2,392-pair pool -> results/overnight_pool_scores.json
-uv run python harness/repair_quantify.py           # two-token repair + verification gate -> console matrix (17/0/71/18)
-uv run python harness/calibrate_ragturk_matcher.py # frozen scorer vs 106 hand labels -> results/ragturk_matcher_labeled.json
-sha256sum pre-registration.md                      # body hash must equal the header value
+python harness/overnight_scorer_pool.py     # defect scan over the 2,392-pair pool -> harness/results/overnight_pool_scores.json (expect 9 + 36 defects)
+python harness/repair_quantify.py           # two-token repair + verification gate -> VERIFY PASS (17/0/71/18, recall 0.486)
+python harness/calibrate_ragturk_matcher.py # frozen scorer vs 106 hand labels (expect TP=13 FP=0 TN=71 FN=22, recall 0.371)
+sha256sum pre-registration.md               # must equal c75acd14e63e910d389a468b8fa16a96604d4b3314660a593ac74fdd54aa9d8a (frozen 2026-09-30, before hypothesis testing)
 ```
 
 **Spend:** $0.00 — every number in this repo was produced without a single API call
@@ -80,6 +98,10 @@ sha256sum pre-registration.md                      # body hash must equal the he
   documents this; no threshold tuned post hoc); steps 1–3 are exploratory.
 - tr_mmlu deepseek (+3.5pp) and mimo (+3.0pp) move ≥ +3pp but fail Holm — reported
   directional-only, never upgraded.
+
+## Author
+
+Oğuz Emre Cura — Independent Researcher — [oguzemrecura@gmail.com](mailto:oguzemrecura@gmail.com) — [github/oguzcura](https://github.com/oguzcura)
 
 ## License
 
