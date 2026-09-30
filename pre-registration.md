@@ -1,13 +1,3 @@
-# PRE-REGISTRATION (repo-root copy)
-
-sha256 of the frozen pre-registration body below (as first written 2026-09-30, before Amendment A1 was appended to the research-notes original):
-`c75acd14e63e910d389a468b8fa16a96604d4b3314660a593ac74fdd54aa9d8a`
-
-The body below is a byte-for-byte copy of
-`research/notes/pre_reg_draft_scorer-invariance_2026-09-30.md` (hash above computed over that file). Verify with `sha256sum` against the original. Any post-freeze change is a dated append-only Amendment; existing text is never edited.
-
----
-
 # PRE-REGISTRATION — Scorer Invariance: Double-Adjudication & Benchmark-Impact Study (2026-09-30)
 
 **Frozen BEFORE step 4.** Timestamp of first write: 2026-09-30.
